@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <script src="./script.js" type="module" defer="true"></script>
+  <title>LaToutDouxListe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <a href="/" class="page-logo">
+        <img src="./img/logo.png" alt="logo Tout Doux Liste">
+      </a>
+    </header>
+    <main class="page-content">
+      <h1 class="page-title">Aujourd'hui on y va Tout Doux et on remet tout à demain.</h1>
+      <p class="page-desc">La Tout Doux Liste vous permet de ne rien oublier à l'aide d'une liste ou sous forme de post-its selon vos préférences.</p>
+
+      <section class="segment">
+        <h2 class="segment-title">Liste de tâches</h2>
+        <div class="widget">
+          <form class="widget-menu form" id="new-task">
+            <h3 class="widget-title">Nouvelle tâche</h3>
+            <label class="form-field">
+              Titre
+              <input name="title" class="form-input" required>
+            </label>
+            <label class="form-field">
+              Priorité
+              <select name="priority" class="form-input" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </label>
+            <button class="form-action">
+              Ajouter
+            </button>
+          </form>
+          <div class="widget-content">
+            <h3 class="widget-title">Vos tâches</h3>
+            <ul class="task" id="tasks">
+              <!-- 
+                ici les nouvelle taches qui vont s'afficher dans le DOM
+                <li class="task-item task-item--ended">
+                <span class="task-title">Acheter du pain - Terminé</span>
+                <span class="task-priority task-priority--1">1</span>
+                <button class="task-action">Changer le statut</button>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="segment">
+        <h2 class="segment-title">Post-its</h2>
+        <div class="widget">
+          <form class="widget-menu form" id="new-postit">
+            <h3 class="widget-title">Nouveau post-it</h3>
+            <label class="form-field">
+              Contenu
+              <input name="content" class="form-input" required>
+            </label>
+            <label class="form-field">
+              Couleur
+              <input name="color" class="form-input" type="color" required>
+            </label>
+            <button class="form-action">
+              Ajouter
+            </button>
+          </form>
+          <div class="widget-content">
+            <h3 class="widget-title">Vos post-its</h3>
+            <div class="postit-container" id="postits">
+              <!-- 
+                ici les nouveaux postits qui vont s'afficher dans le DOM
+                <div class="postit" style="border-color: #AA0055">
+                <button class="postit-action" aria-label="Supprimer">&times;</button>
+                <p>Rappeler la Sacem</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      &copy; La Tout Doux Liste
+    </footer>
+  </div>
+</body>
+</html>
